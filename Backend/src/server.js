@@ -1,6 +1,7 @@
 import cors from "cors";
 import express from "express";
 import { config } from "./config.js";
+import db from "./config/db.js";
 import protocolRouter from "./routes/protocol.js";
 import tradersRouter from "./routes/traders.js";
 import usersRouter from "./routes/users.js";
