@@ -15,8 +15,9 @@ export const config = {
     user: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
-    ssl:
-      process.env.DB_SSL === "true" ? { rejectUnauthorized: true } : undefined,
+    ssl: {
+      rejectUnauthorized: false,
+    },
   },
   chain: {
     chainId: Number(process.env.ARC_CHAIN_ID || 5042002),

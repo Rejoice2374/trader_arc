@@ -5,5 +5,16 @@ export const pool = mysql.createPool({
   ...config.db,
   waitForConnections: true,
   connectionLimit: 10,
-  namedPlaceholders: true
+  namedPlaceholders: true,
 });
+
+pool
+  .getConnection()
+  .then((connection) => {
+    connection.release();
+  })
+  .catch((error) => {
+    console.error("Database connection failed:", error.message);
+  });
+
+export default pool;

@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS trades (
   market VARCHAR(64) NOT NULL,
   side ENUM('long', 'short') NOT NULL,
   collateral DECIMAL(38, 6) NOT NULL,
-  leverage_bps INT NOT NULL,
+  leverage_x INT NOT NULL,
   size_usd DECIMAL(38, 6) NOT NULL,
   pnl DECIMAL(38, 6) NULL,
   status ENUM('open', 'closed') NOT NULL DEFAULT 'open',
